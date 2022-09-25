@@ -1,0 +1,84 @@
+html {
+  background-color: #f0ecc6;
+  color: black;
+}
+#banner {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  padding: 5px;
+  color: #ffffff;
+  background-color: #ffffff;
+  background-image: url(images.jpg);
+  border: 4px solid #f6f7f4;
+  margin-left: 26%;
+  text-align: center;
+}
+#left {
+  background-color: #6b7d57;
+  color: white;
+  width: 25%;
+  top: 0px;
+  height: 100%;
+  position: fixed;
+}
+#main {
+  background-color: #f0ecc6;
+
+  height: auto;
+  margin-top: 5px;
+  margin-left: 26%;
+  position: static;
+  text-align: center;
+}
+
+input[type="button"] {
+  background-color: #6b7d57;
+  width: 60%;
+  border: none;
+  color: white;
+  padding: 13px 20px;
+  font-size: 17px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+h3 {
+  text-align: center;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 18px;
+  text-decoration: none;
+}
+ul {
+  list-style-type: square;
+}
+input[type="number"] {
+  width: 60%;
+  padding: 15px 18px;
+  margin: 8px;
+  display: inline-block;
+  border: 4px solid #f6f7f4;
+  box-sizing: border-box;
+  font-size: 17px;
+}
+input[type="date"] {
+  width: 35%;
+  padding: 12px 17px;
+  margin: 8px;
+  display: inline-block;
+  border: 4px solid #f6f7f4;
+  box-sizing: border-box;
+  font-size: 17px;
+}
+select {
+  width: 35%;
+  padding: 15px 20px;
+  font-size: 17px;
+  border: 4px solid #f6f7f4;
+}
+.choose {
+  font-size: 20px;
+}
