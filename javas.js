@@ -22,6 +22,26 @@ let netPrice,
 const priceFuel = 6.49;
 const priceRentalForDay = 20.0;
 
+const menu_slide = () => {
+  const logo = document.querySelector(".logo");
+  const menu = document.querySelector(".menu_list");
+  const menu_list = document.querySelectorAll(".menu_list li");
+
+  logo.addEventListener("click", () => {
+    menu.classList.toggle("menu_list_active");
+    menu_list.forEach((list, index) => {
+      if (list.style.animation) {
+        list.style.animation = "";
+      } else {
+        list.style.animation = `menu_listFade 0.5s ease forwards ${
+          index / 7 + 0.5
+        }s`;
+      }
+    });
+  });
+};
+menu_slide();
+
 const numberOfDay = () => {
   const end = document.querySelector("#end").value;
   const start = document.querySelector("#start").value;
@@ -36,6 +56,7 @@ const numberOfDay = () => {
     document.querySelector("#totalPrice").innerHTML = netPrice;
     console.log(netPrice);
     console.log(rentDays);
+    document.querySelector("#text_days").innerHTML = "Number of days:";
     document.querySelector("#days").innerHTML = rentDays;
   } else {
     document.querySelector("#days").innerHTML =
@@ -134,9 +155,12 @@ const numberOfDay = () => {
     console.log(numberOfKilometers);
     const priceGrossCalculation = netPrice * 0.23;
     const grossPrice = netPrice + priceGrossCalculation;
-    totalPrice.innerText = `Net price:${netPrice.toFixed(2)} 
-    Gross price: ${grossPrice.toFixed(2)}`;
-    addition.innerText = `
+    totalPrice.innerText = `Total price:
+    Net price:${netPrice.toFixed(2)} 
+    Gross price: ${grossPrice.toFixed(2)}
+    
+    `;
+    addition.innerText = `Adittion:
   -Years of driving license :${yearsOfDrivingLicense}
   -Price for availability: ${priceForAvailability}
   -Fuel ${fuel.toFixed(2)}`;

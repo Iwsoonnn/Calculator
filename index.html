@@ -6,89 +6,170 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="banner">
-      <h1>Calculator</h1>
-    </div>
+    <div id="page">
+      <div id="banner">
+        <div id="text_banner"><p id="text_banner_tittle">Calculator</p></div>
+      </div>
 
-    <div id="left">
-      <h3>RENTAL PRICE</h3>
-      <h4>Number of days:</h4>
-      <h5 id="days"></h5>
-      <hr />
-      <h4>Total price:</h4>
-      <h5 id="totalPrice"></h5>
-      <hr />
-      <h4>Adittion:</h4>
-      <h5 id="addition"></h5>
-    </div>
+      <nav>
+        <ul class="menu_list">
+          <li><a href="#">Car to rental</a></li>
+          <li><a href="#">Price of fuel</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Help</a></li>
+          <li><a href="#">Contacts</a></li>
+        </ul>
+        <div class="logo">
+          <div id="line1"></div>
+          <div id="line2"></div>
+          <div id="line3"></div>
+        </div>
+      </nav>
 
-    <div id="main">
-      <h4>Enter a estimate of the numer of kilometers to be traveled:</h4>
-      <p id="empty"></p>
-      <!--kilometry-->
-      <input
-        type="number"
-        name="numberOfKilometers"
-        id="numberOfKilometers"
-        min="1"
-      />
+      <div id="main">
+        <div id="main_info">
+          <p id="main_text">Remember about:</p>
 
-      <!--rok otrzymania -->
-      <h4>Enter a year of receipt of the driving license:</h4>
-      <p id="drivingLicense"></p>
+          <div id="main_info_rule">
+            <img src="list.png" alt="list" /> completing all fields
+          </div>
+          <div id="main_info_rule">
+            <img src="list.png" alt="list" /> check the availability of the car
+            in the menu
+          </div>
+          <div id="main_info_rule">
+            <img src="list.png" alt="list" />
+            in case of problems contact us
+          </div>
+        </div>
+        <div id="main_box_input">
+          <div id="main_input">
+            <h3 id="text">
+              Enter a estimate of the number of kilometers to be traveled:
+            </h3>
+            <p id="empty"></p>
+            <!--kilometry-->
 
-      <input
-        type="number"
-        name="year"
-        id="year"
-        min="1922"
-        max="2022"
-        value="2000"
-      />
-      <!--termin-->
+            <input
+              type="number"
+              name="numberOfKilometers"
+              id="numberOfKilometers"
+              min="1"
+              value="100"
+            />
+          </div>
+          <div id="main_input">
+            <h3 id="text">Enter a year of receipt of the driving license:</h3>
+            <p id="drivingLicense"></p>
 
-      <h4>Enter the car rental date</h4>
+            <input
+              type="number"
+              name="year"
+              id="year"
+              min="1922"
+              max="2022"
+              value="2000"
+            />
+            <!--rok otrzymania -->
+          </div>
 
-      <p>from:</p>
-      <input type="date" id="start" />
+          <div id="main_input">
+            <h3 id="text">Enter the car rental date</h3>
 
-      <p>to:</p>
-      <input type="date" id="end" /><br /><br />
+            <p>from:</p>
+            <input type="date" id="start" />
 
-      <h4>Choose a car:</h4>
-      <!--lista rozwijana-->
-      <br />
-      <select id="car">
-        <option value="audi" name="availability">audi</option>
-        <option value="bmw" name="availability">bmw</option>
-        <option value="toyota" name="availability">toyota</option>
-        <option value="mercedes" name="availability">mercedes</option>
-      </select>
-      <br />
-      <!--radio buttons-->
-      <h4>Choose a type of car :</h4>
-      <label class="choose">
-        <input type="radio" name="choose" id="basic" value="basic" /> basic
-        <input
-          type="radio"
-          name="choose"
-          id="standard"
-          value="standard"
-        />standard
-        <input type="radio" name="choose" id="medium" value="medium" />medium
-        <input
-          type="radio"
-          name="choose"
-          id="premium"
-          value="premium"
-        />premium<br />
-      </label>
-      <p id="selected"></p>
-      <!--button-->
-      <input type="button" value="send" id="button" onClick="numberOfDay()" />
+            <p>to:</p>
+            <input type="date" id="end" /><br /><br />
+          </div>
+          <!--termin-->
+          <div id="main_input">
+            <h3 id="text">Choose a car:</h3>
+            <!--lista rozwijana-->
+            <br />
+            <select id="car">
+              <option value="audi" name="availability">audi</option>
+              <option value="bmw" name="availability">bmw</option>
+              <option value="toyota" name="availability">toyota</option>
+              <option value="mercedes" name="availability">mercedes</option>
+            </select>
+            <br />
+          </div>
+
+          <div id="main_input">
+            <!--radio buttons-->
+            <h3 id="text">Choose a type of car :</h3>
+            <label class="main_choose">
+              <label class="choose"
+                ><input
+                  type="radio"
+                  name="choose"
+                  id="basic"
+                  value="basic"
+                  checked
+                />
+                basic</label
+              >
+              <label class="choose"
+                ><input
+                  type="radio"
+                  name="choose"
+                  id="standard"
+                  value="standard"
+                />standard</label
+              >
+
+              <label class="choose"
+                ><input
+                  type="radio"
+                  name="choose"
+                  id="medium"
+                  value="medium"
+                />medium</label
+              >
+
+              <label class="choose"
+                ><input
+                  type="radio"
+                  name="choose"
+                  id="premium"
+                  value="premium"
+                />premium<br /> </label
+            ></label>
+
+            <p id="selected"></p>
+          </div>
+
+          <div id="main_input">
+            <!--button-->
+            <input
+              type="button"
+              value="send"
+              id="button"
+              onClick="numberOfDay()"
+            />
+          </div>
+        </div>
+      </div>
       <!--wyswietlanie -->
+      <div id="rental_price">
+        <p id="main_text">RENTAL PRICE</p>
+        <hr />
+        <div id="rental_price_items">
+          <div id="rental_price_item">
+            <p id="text_days"></p>
+            <p id="days"></p>
+          </div>
+          <div id="rental_price_item">
+            <p id="totalPrice"></p>
+          </div>
+          <div id="rental_price_item">
+            <p id="addition"></p>
+          </div>
+        </div>
+      </div>
+      <hr />
     </div>
-
     <script src="javas.js"></script>
   </body>
 </html>
