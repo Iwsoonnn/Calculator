@@ -113,7 +113,10 @@ nav {
     transform: translateY(0px);
   }
 }
+@media screen and (min-width: 320px) {
+  body {
     overflow-x: hidden;
+  }
   .menu_list {
     position: absolute;
     right: 5px;
