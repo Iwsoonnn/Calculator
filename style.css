@@ -42,6 +42,7 @@ nav {
 .menu_list {
   display: flex;
   justify-content: space-around;
+
   width: 60%;
 }
 .menu_list a {
@@ -81,8 +82,8 @@ nav {
   .menu_list {
     position: absolute;
     right: 5px;
-    height: 100%;
-    top: 21%;
+    height: 92vh;
+    top: 20.8vh;
     background-color: #53831cbb;
     display: flex;
     flex-direction: column;
@@ -112,7 +113,6 @@ nav {
     transform: translateY(0px);
   }
 }
-
 #text {
   font-size: 18px;
 }
