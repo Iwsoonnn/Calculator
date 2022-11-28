@@ -112,45 +112,7 @@ nav {
     transform: translateY(0px);
   }
 }
-@media screen and (max-width: 320px) {
-  body {
-    overflow-x: hidden;
-    font-size: 5%;
-  }
-  .menu_list {
-    position: absolute;
-    right: 0px;
-    height: 100%;
-    top: 21%;
-    background-color: #53831cbb;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    transform: translateX(100%);
-    transition: transform 0.5s ease-in;
-  }
-  .menu_list li {
-    opacity: 0;
-  }
-  .logo {
-    display: block;
-    cursor: pointer;
-  }
-}
-.menu_list_active {
-  transform: translateX(0%);
-}
-@keyframes menu_listFade {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
+
 #text {
   font-size: 18px;
 }
